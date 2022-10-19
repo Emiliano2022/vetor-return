@@ -1,0 +1,27 @@
+#include <iostream>
+#include <stdio.h>
+
+struct tipo_conta{
+	int codigo;
+	char nome[100];
+	float saldo;	
+};
+
+int main() {
+
+	struct tipo_conta conta[3];
+	printf ("Cadastrando os Clientes\n");
+	int i;
+	for(i = 0;i<= 2; i++){
+	printf("%d . cliente\n",i+1);
+	printf("Codigo:");
+	scanf("%d",&conta[i].codigo);
+	fflush(stdin);
+	printf("Nome:");
+	gets(conta[i].nome);
+	printf("Saldo:");
+	scanf("%f",&conta[i].saldo);
+		
+	}
+	return 0;
+}
